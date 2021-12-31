@@ -1,48 +1,62 @@
 <!-- Source: https://pbxbook.com/other/dtmftone.html -->
-<script src="tones.js"></script>
-<script src="custom.js"></script>
-<h1>Tones</h1>
-<table>
-    <tbody><tr>
-            <td></td><th>1209Hz</th><th>1336Hz</th><th>1477Hz</th><th>1633Hz</th>
-        </tr>
-        <tr>
-            <th>697Hz</th>
-            <td><button onmousedown="dialTone(697.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">1</button></td>
-            <td><button onmousedown="dialTone(697.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">2</button></td>
-            <td><button onmousedown="dialTone(697.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">3</button></td>
-            <td><button onmousedown="dialTone(697.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">A</button></td>
-        </tr>
-        <tr>
-            <th>770Hz</th>
-            <td><button onmousedown="dialTone(770.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">4</button></td>
-            <td><button onmousedown="dialTone(770.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">5</button></td>
-            <td><button onmousedown="dialTone(770.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">6</button></td>
-            <td><button onmousedown="dialTone(770.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">B</button></td>
-        </tr>
-        <tr>
-            <th>852Hz</th>
-            <td><button onmousedown="dialTone(852.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">7</button></td>
-            <td><button onmousedown="dialTone(852.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">8</button></td>
-            <td><button onmousedown="dialTone(852.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">9</button></td>
-            <td><button onmousedown="dialTone(852.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">C</button></td>
-        </tr>
-        <tr>
-            <th>941Hz</th>
-            <td><button onmousedown="dialTone(941.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">*</button></td>
-            <td><button onmousedown="dialTone(941.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">0</button></td>
-            <td><button onmousedown="dialTone(941.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">#</button></td>
-            <td><button onmousedown="dialTone(941.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">D</button></td>
-        </tr>
-    </tbody>
-</table>
-<hr />
-<h1>Practice</h1>
-Press <b>space</b> to play a random tone.
-<label>Numbers from 0 up to <input id="max-tone" type="number" min=0 max=9 value="9" /></label>
+<html>
+    <head>
+        <title>DTMF Tone Player</title>
+        <meta name="description" content="A free tool for playing DTMF (Dual Tone Multi Frequency) tones either to learn or just to play with.">
+        <script src="tones.js"></script>
+        <script src="custom.js"></script>
+    </head>
+<body>
+    <h1>Tones</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td></td><th>1209Hz</th><th>1336Hz</th><th>1477Hz</th><th>1633Hz</th>
+            </tr>
+            <tr>
+                <th>697Hz</th>
+                <td><button onmousedown="dialTone(697.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">1</button></td>
+                <td><button onmousedown="dialTone(697.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">2</button></td>
+                <td><button onmousedown="dialTone(697.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">3</button></td>
+                <td><button onmousedown="dialTone(697.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">A</button></td>
+            </tr>
+            <tr>
+                <th>770Hz</th>
+                <td><button onmousedown="dialTone(770.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">4</button></td>
+                <td><button onmousedown="dialTone(770.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">5</button></td>
+                <td><button onmousedown="dialTone(770.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">6</button></td>
+                <td><button onmousedown="dialTone(770.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">B</button></td>
+            </tr>
+            <tr>
+                <th>852Hz</th>
+                <td><button onmousedown="dialTone(852.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">7</button></td>
+                <td><button onmousedown="dialTone(852.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">8</button></td>
+                <td><button onmousedown="dialTone(852.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">9</button></td>
+                <td><button onmousedown="dialTone(852.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">C</button></td>
+            </tr>
+            <tr>
+                <th>941Hz</th>
+                <td><button onmousedown="dialTone(941.0, 1209.0)" onmouseup="stop()" onmouseout="stop()">*</button></td>
+                <td><button onmousedown="dialTone(941.0, 1336.0)" onmouseup="stop()" onmouseout="stop()">0</button></td>
+                <td><button onmousedown="dialTone(941.0, 1477.0)" onmouseup="stop()" onmouseout="stop()">#</button></td>
+                <td><button onmousedown="dialTone(941.0, 1633.0)" onmouseup="stop()" onmouseout="stop()">D</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h1>Practice</h1>
+    Press <b>space</b> to play a random tone.
+    <label>Numbers from 0 up to <input id="max-tone" type="number" min=0 max=9 value="9" /></label>
 
-<div style="font-size: 5em;">
-    Current tone: <span style="font-weight: bold;" id="current-tone"></span>
-</div>
+    <div style="font-size: 5em;">
+        Current tone: <span style="font-weight: bold;" id="current-tone"></span>
+    </div>
 
-<blockquote><em>Note</em>, the first tone may not play right away</blockquote>
+    <blockquote><em>Note</em>, the first tone may not play right away</blockquote>
+
+    <hr />
+    <footer>
+        Find source on <a href="https://github.com/quittle/dtmf-tone-player">GitHub</a>.
+    </footer>
+</body>
+</html>
