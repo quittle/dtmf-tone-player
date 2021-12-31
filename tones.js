@@ -1,22 +1,23 @@
-const AudioContextClass = (window.AudioContext ||
+const AudioContextClass = (
+  window.AudioContext ||
   window.webkitAudioContext ||
   window.mozAudioContext ||
   window.oAudioContext ||
   window.msAudioContext);
 
-let context = null;
-
-function initAudioContext() {
-  if (!context && AudioContextClass) {
+let contextSingleton = null;
+function getAudioContext() {
+  if (!contextSingleton && AudioContextClass) {
     // Web Audio API is available.
-    context = new AudioContextClass();
+    contextSingleton = new AudioContextClass();
   }
+
+  return contextSingleton;
 }
 
 let oscillator1, oscillator2;
-
 function dialTone(freq1, freq2){
-  initAudioContext();
+  const context = getAudioContext();
 
   stop();
 
@@ -38,7 +39,7 @@ function dialTone(freq1, freq2){
 };
 
 function stop() {
-  initAudioContext();
+  const context = getAudioContext();
 
   oscillator1 && oscillator1.disconnect();
   oscillator2 && oscillator2.disconnect();

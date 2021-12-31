@@ -19,8 +19,8 @@ function press(num) {
 
 function init() {
     document.addEventListener('keypress', e => {
-        const key = e.key;
-        if (key === ' ') {
+        const key = e.key.toLocaleUpperCase('en-US');
+        if (key === ' ' || key === 'ENTER') {
             setCurrentTone('?');
             const max = parseInt(document.getElementById('max-tone').value);
             const num = Math.floor(Math.random() * (max + 1));
