@@ -1,3 +1,8 @@
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
 table {
     border: 0.1em solid;
     border-radius: 3px;
