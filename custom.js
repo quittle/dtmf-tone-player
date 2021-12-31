@@ -17,16 +17,26 @@ function press(num) {
     }, 1000);
 }
 
+function onPracticeSubmit(e) {
+    e.preventDefault();
+
+    playRandom();
+}
+
+function playRandom() {
+    setCurrentTone('?');
+    const max = parseInt(document.getElementById('max-tone').value);
+    const num = Math.floor(Math.random() * (max + 1));
+
+    press(num);
+    setTimeout(() => setCurrentTone(num), 1000);
+}
+
 function init() {
     document.addEventListener('keypress', e => {
         const key = e.key.toLocaleUpperCase('en-US');
         if (key === ' ' || key === 'ENTER') {
-            setCurrentTone('?');
-            const max = parseInt(document.getElementById('max-tone').value);
-            const num = Math.floor(Math.random() * (max + 1));
-
-            press(num);
-            setTimeout(() => setCurrentTone(num), 1000);
+            playRandom();
         } else {
             setCurrentTone(key);
             press(key);

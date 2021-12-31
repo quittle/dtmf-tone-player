@@ -48,8 +48,11 @@
         </table>
         <hr />
         <h1>Practice</h1>
-        Press <b>space</b> to play a random tone.
-        <label>Numbers from 0 up to <input id="max-tone" type="number" min=0 max=9 value="9" /></label>
+        Press <b>space</b>, <b>enter</b> or the button to play a random tone.
+        <form onsubmit="onPracticeSubmit(event)">
+            <label>Numbers from 0 up to <input id="max-tone" type="number" min=0 max=9 value="9" /></label>
+            <button type="submit">Play Random</button>
+        </form>
 
         <div id="current-tone-wrapper">
             Current tone: <span style="font-weight: bold;" id="current-tone"></span>

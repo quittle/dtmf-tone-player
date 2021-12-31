@@ -19,14 +19,14 @@ td {
     padding:  0.25em;
 }
 
-button {
+table button {
     display: inline-block;
     width: 3em;
     height: 3em;
     font-size:  1em;
 }
 
-input {
+input, button {
     font-size:  1em;
 }
 
