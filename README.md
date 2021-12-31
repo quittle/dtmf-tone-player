@@ -4,8 +4,10 @@ Learn to identify "Dual tone multi frequency" notes used by phones.
 
 [Jump to live demo!](https://quittle.github.io/dtmf-tone-player)
 
-### Screenshot
-![Screenshot](./screenshot.png)
+| Website Preview  |
+| --: |
+| ![Screenshot](./screenshot.png) |
+
 
 # Build and Usage
 
