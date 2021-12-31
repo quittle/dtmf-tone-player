@@ -30,8 +30,6 @@ function init() {
             pressing = false;
         }, 1000);
     }
-
-    // document.addEventListener('keypress', e =>);
 }
 
 init();
