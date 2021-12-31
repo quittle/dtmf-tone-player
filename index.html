@@ -6,13 +6,15 @@
         <link rel="shortcut icon" type="image/png" href="./icon-64.png"/>
         <meta property="og:image" content="./icon-940.png">
         <meta name="twitter:image" content="./icon-940.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="tones.js"></script>
         <script src="custom.js"></script>
         <link rel="stylesheet" href="main.css" />
     </head>
     <body>
         <header>
-            <h1><img src="./icon-64.png" /> Tones</h1>
+            <h1><img src="./icon-64.png" /> <span id="title-text">Tones</span></h1>
         </header>
         <em>Press</em> a button or <em>type</em> the number or symbol to play the tone.
         <table>
@@ -49,7 +51,7 @@
         Press <b>space</b> to play a random tone.
         <label>Numbers from 0 up to <input id="max-tone" type="number" min=0 max=9 value="9" /></label>
 
-        <div style="font-size: 5em;">
+        <div id="current-tone-wrapper">
             Current tone: <span style="font-weight: bold;" id="current-tone"></span>
         </div>
 

@@ -1,5 +1,10 @@
+body {
+    margin: 1em;
+}
+
 header h1 {
     display: flex;
+    font-size: revert;
     align-items: center;
 }
 
@@ -18,4 +23,36 @@ button {
     display: inline-block;
     width: 3em;
     height: 3em;
+    font-size:  1em;
+}
+
+input {
+    font-size:  1em;
+}
+
+#current-tone-wrapper {
+    font-size: 5em;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+    }
+    body {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    header h1 {
+        justify-content:  center;
+    }
+
+    table {
+        font-size: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #current-tone-wrapper {
+        font-size: 2em;
+    }
 }

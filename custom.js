@@ -32,7 +32,13 @@ function init() {
             press(key);
         }
     });
+
+    document.addEventListener('click', e => {
+        const button = e.target;
+        if (button) {
+            press(button.innerText);
+        }
+    });
 }
 
 init();
-document.addEventListener('load', init);
