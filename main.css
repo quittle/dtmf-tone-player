@@ -10,9 +10,12 @@ header h1 {
 
 table {
     border: 0.1em solid;
-    border-radius: 3px;
-    margin: 1em;
     padding: 1em;
+}
+
+table, #duration {
+    margin: 1em;
+    border-radius: 3px;
 }
 
 td {
@@ -28,6 +31,15 @@ table button {
 
 input, button {
     font-size:  1em;
+}
+
+#duration {
+    text-align: left;
+    max-width: 240px;
+}
+
+#duration label {
+    display: block;
 }
 
 #current-tone-wrapper {
@@ -50,6 +62,10 @@ input, button {
         font-size: 4vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #duration {
+        max-width: 100%;
     }
 
     #current-tone-wrapper {
